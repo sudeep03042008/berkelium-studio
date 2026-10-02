@@ -3,5 +3,7 @@ uvicorn
 httpx
 pytesseract
 pillow
-pypdf2
+pypdf
 python-multipart
+slowapi
+pydantic
