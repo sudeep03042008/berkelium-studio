@@ -59,14 +59,24 @@ cd berkelium-studio
 
 > config.json is never committed to git. Keep your API keys private.
 
-### 3. Install dependencies
+### 3. Install Tesseract OCR
+
+The `/ocr` endpoint needs the Tesseract binary installed on your system (pytesseract is just a Python wrapper around it).
+
+- **Mac**: `brew install tesseract`
+- **Ubuntu/Debian**: `sudo apt install tesseract-ocr`
+- **Windows**: Download from https://github.com/UB-Mannheim/tesseract/wiki
+
+Verify it works with: `tesseract --version`
+
+### 4. Install dependencies
 
 ```bash
 cd backend
 pip install -r requirements.txt
 ```
 
-### 4. Run the backend
+### 5. Run the backend
 
 ```bash
 uvicorn main:app --reload
