@@ -6,7 +6,7 @@ The FastAPI backend powering Berkelium Studio. Handles AI chat, image OCR, and P
 
 ## Endpoints
 
-- **GET /health** — Health check. Returns `{"status": "ok"}`.
+- **GET /health** — Health check. Returns status of Tesseract and config. Add `?deep=1` to also ping Fireworks (slower, use before demos to confirm the Fireworks key works).
 - **POST /chat** — Send a message to the AI model via Fireworks AI. Requires `X-API-Key` header.
 - **POST /ocr** — Extract text from an image using Tesseract OCR. Requires `X-API-Key` header.
 - **POST /pdf-ocr** — Extract text from a PDF file. Requires `X-API-Key` header.
